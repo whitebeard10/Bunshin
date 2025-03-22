@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2c3e50" />
+      <stop offset="100%" stop-color="#1a2a38" />
+    </linearGradient>
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3498db" />
+      <stop offset="100%" stop-color="#2980b9" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  
+  <!-- Main background -->
+  <rect width="800" height="600" fill="url(#bgGradient)" />
+  
+  <!-- Decorative elements -->
+  <circle cx="120" cy="500" r="80" fill="#34495e" opacity="0.3" />
+  <circle cx="700" cy="150" r="100" fill="#34495e" opacity="0.2" />
+  <circle cx="400" cy="550" r="150" fill="#34495e" opacity="0.1" />
+  
+  <!-- Logo circle -->
+  <g filter="url(#glow)">
+    <circle cx="400" cy="240" r="120" fill="url(#logoGradient)" />
+    
+    <!-- Dashboard icons in logo -->
+    <rect x="340" y="180" width="120" height="80" rx="5" fill="white" opacity="0.9" />
+    <rect x="350" y="190" width="100" height="10" rx="2" fill="#3498db" opacity="0.8" />
+    <rect x="350" y="210" width="70" height="10" rx="2" fill="#3498db" opacity="0.8" />
+    <rect x="350" y="230" width="90" height="10" rx="2" fill="#3498db" opacity="0.8" />
+    <rect x="350" y="250" width="50" height="10" rx="2" fill="#3498db" opacity="0.8" />
+    
+    <!-- Small circle icons around logo -->
+    <circle cx="320" cy="170" r="15" fill="white" opacity="0.7" />
+    <circle cx="470" cy="190" r="12" fill="white" opacity="0.7" />
+    <circle cx="440" cy="320" r="18" fill="white" opacity="0.7" />
+    <circle cx="330" cy="290" r="10" fill="white" opacity="0.7" />
+  </g>
+  
+  <!-- App name -->
+  <text x="400" y="400" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="white" text-anchor="middle">Personal Assistant</text>
+  
+  <!-- Tagline -->
+  <text x="400" y="440" font-family="Arial, sans-serif" font-size="24" fill="#ecf0f1" text-anchor="middle">Your life, organized</text>
+  
+  <!-- Loading bar -->
+  <rect x="250" y="480" width="300" height="15" rx="7" fill="#34495e" />
+  <rect x="250" y="480" width="200" height="15" rx="7" fill="#3498db" />
+  
+  <!-- Version -->
+  <text x="400" y="530" font-family="Arial, sans-serif" font-size="16" fill="#7f8c8d" text-anchor="middle">Version 1.0</text>
+  
+  <!-- Copyright -->
+  <text x="400" y="560" font-family="Arial, sans-serif" font-size="12" fill="#7f8c8d" text-anchor="middle">© 2025 Your Name</text>
+</svg>

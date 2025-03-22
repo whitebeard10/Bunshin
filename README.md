@@ -48,7 +48,7 @@ Before running the application, ensure you have the following installed:
 
 1.  **Clone the repository:**
     ```bash
-    git clone [Your repository URL]
+    git clone https://github.com/whitebeard10/Bunshin
     cd DesktopApp
     ```
 2.  **Create a virtual environment (Recommended):**
@@ -68,7 +68,7 @@ Before running the application, ensure you have the following installed:
     ```bash
     pip install -r requirements.txt
     ```
-    *(Note:  You'll need to create a `requirements.txt` file listing all the project dependencies.  A basic one would include `PyQt6`)*
+    
 
 ## 4. Usage
 
@@ -81,14 +81,13 @@ Before running the application, ensure you have the following installed:
 
 ## 5. Dependencies
 
-* Python (Specify version)
-* PyQt6 (Specify version)
+* Python 
+* PyQt6 
 * SQLite (Usually comes with Python)
 * Pillow
 * Requests
 * NLTK or spaCy
 * Pandas
-*(Note:  You should create a requirements.txt file)*
 
 ## 6. Contributing
 
@@ -101,7 +100,7 @@ Contributions are welcome!  To contribute:
 
 ## 7. License
 
-[Specify the license] (e.g., MIT, GPL)
+MIT license
 
 ## 8. Roadmap
 

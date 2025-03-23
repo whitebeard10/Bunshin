@@ -1,14 +1,14 @@
 from PyQt6.QtWidgets import QMainWindow, QStackedWidget
 from app.features.login import LoginPage
+from app.features.landing_page import LandingPage
 from app.features.signup import SignUpPage
 from app.features.forgot_password import ForgotPasswordPage
-from app.features.password_manager import PasswordManager
 
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("My Desktop App")
-        self.setGeometry(100, 100, 800, 600)
+        self.setGeometry(100, 100, 1200, 800)
 
         # Stacked widget to switch between pages
         self.stacked_widget = QStackedWidget()
@@ -16,11 +16,15 @@ class MainWindow(QMainWindow):
 
         # Login page
         self.login_page = LoginPage(
-            on_login_success=self.show_password_manager,
+            on_login_success=self.show_landing_page,
             on_go_to_signup=self.show_signup,
             on_go_to_forgot_password=self.show_forgot_password
         )
         self.stacked_widget.addWidget(self.login_page)
+
+        # Landing page
+        self.landing_page = LandingPage(on_logout=self.show_login)
+        self.stacked_widget.addWidget(self.landing_page)
 
         # Sign-up page
         self.signup_page = SignUpPage(
@@ -35,10 +39,6 @@ class MainWindow(QMainWindow):
         )
         self.stacked_widget.addWidget(self.forgot_password_page)
 
-        # Password manager page
-        self.password_manager = PasswordManager()
-        self.stacked_widget.addWidget(self.password_manager)
-
         # Show login page by default
         self.stacked_widget.setCurrentWidget(self.login_page)
 
@@ -51,5 +51,8 @@ class MainWindow(QMainWindow):
     def show_forgot_password(self):
         self.stacked_widget.setCurrentWidget(self.forgot_password_page)
 
-    def show_password_manager(self):
-        self.stacked_widget.setCurrentWidget(self.password_manager)
+    def show_landing_page(self):
+        # Recreate the landing page to ensure it's fresh
+        self.landing_page = LandingPage(on_logout=self.show_login)
+        self.stacked_widget.addWidget(self.landing_page)
+        self.stacked_widget.setCurrentWidget(self.landing_page)

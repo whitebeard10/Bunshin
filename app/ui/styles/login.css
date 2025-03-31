@@ -1,0 +1,128 @@
+/* Base Styles */
+QWidget {
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* Branding Section */
+#brandingFrame {
+    border-radius: 0;
+}
+
+#brandLogo {
+    color: white;
+    font-size: 28px;
+    padding-bottom: 10px;
+}
+
+#brandTagline {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Forms Section */
+#formsFrame {
+    border-radius: 0;
+}
+
+#authForm {
+    background: transparent;
+}
+
+#formTitle {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    padding-bottom: 20px;
+}
+
+/* Input Fields */
+#authInput {
+    padding: 12px 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    min-width: 250px;
+    margin-left: 10px;
+}
+
+#authInput:focus {
+    border: 1px solid #6a11cb;
+}
+
+/* Buttons */
+#primaryButton {
+    background-color: #6a11cb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#primaryButton:hover {
+    background-color: #7d3cff;
+}
+
+#textButton {
+    background: transparent;
+    color: #6a11cb;
+    border: none;
+    font-size: 12px;
+    text-decoration: underline;
+    padding: 5px;
+}
+
+/* Theme Toggle */
+#themeToggle {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    border: none;
+}
+
+/* Form Subtitle */
+#formSubtitle {
+    color: #666;
+    font-size: 14px;
+    padding-bottom: 15px;
+}
+
+.dark #formSubtitle {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Messages */
+#errorMessage {
+    color: #ff4444;
+    font-size: 13px;
+    padding: 5px 0;
+}
+
+#successMessage {
+    color: #00C851;
+    font-size: 13px;
+    padding: 5px 0;
+}
+
+.dark #errorMessage {
+    color: #ff7675;
+}
+
+.dark #successMessage {
+    color: #55efc4;
+}
+
+/* Dark Mode Specific */
+.dark #formTitle {
+    color: white;
+}
+
+.dark #authInput {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.dark #textButton {
+    color: #a1c4fd;
+}

@@ -1,0 +1,85 @@
+/* Base Styles */
+QWidget {
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* Header */
+#header {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 15px 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#logo {
+    color: white;
+    font-size: 20px;
+}
+
+/* Hero Section */
+#heroFrame {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+#heroTitle {
+    color: white;
+    font-size: 32px;
+    padding-bottom: 15px;
+}
+
+#heroSubtitle {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 18px;
+}
+
+/* Features Section */
+#featuresFrame {
+    background-color: transparent;
+}
+
+#sectionTitle {
+    color: white;
+    font-size: 28px;
+    padding-bottom: 30px;
+}
+
+#featureCard {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    border-left: 4px solid #6a11cb;
+}
+
+#featureTitle {
+    color: white;
+    font-size: 18px;
+    padding-bottom: 15px;
+}
+
+#featureDesc {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+}
+
+/* Footer */
+#footer {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#copyright {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 12px;
+}
+
+/* Buttons */
+#logoutButton {
+    background-color: rgba(255, 77, 77, 0.8);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 5px;
+    border: none;
+}
+
+#logoutButton:hover {
+    background-color: rgba(255, 77, 77, 1);
+}

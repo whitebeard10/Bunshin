@@ -8,11 +8,11 @@
     * [3.1 Prerequisites](#31-prerequisites)
     * [3.2 Installation](#32-installation)
 * [4. Usage](#4-usage)
-* [6. Dependencies](#6-dependencies)
-* [7. Contributing](#7-contributing)
-* [8. License](#8-license)
-* [9. Roadmap](#9-roadmap)
-* [10. Contact](#10-contact)
+* [5. Dependencies](#5-dependencies)
+* [6. Contributing](#6-contributing)
+* [7. License](#7-license)
+* [8. Roadmap](#8-roadmap)
+* [9. Contact](#9-contact)
 
 ## 1. Project Description
 

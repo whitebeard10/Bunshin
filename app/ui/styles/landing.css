@@ -1,78 +1,127 @@
+/* app/ui/styles/landing.css */
+
 /* Base Styles */
 QWidget {
     font-family: 'Segoe UI', Arial, sans-serif;
+    color: white;
 }
 
-/* Header */
-#header {
+/* Main Window Background */
+LandingPage {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1,
+                               stop:0 #0f2041,
+                               stop:1 #411041);
+}
+
+/* Header Styles */
+QFrame#header {
     background-color: rgba(0, 0, 0, 0.2);
     padding: 15px 30px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-#logo {
+QLabel#logo {
     color: white;
     font-size: 20px;
+    font-weight: bold;
 }
 
-/* Hero Section */
-#heroFrame {
-    background-color: rgba(0, 0, 0, 0.3);
-    border-radius: 10px;
-}
-
-#heroTitle {
+/* Navigation Buttons */
+QPushButton {
     color: white;
-    font-size: 32px;
-    padding-bottom: 15px;
-}
-
-#heroSubtitle {
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 18px;
-}
-
-/* Features Section */
-#featuresFrame {
-    background-color: transparent;
-}
-
-#sectionTitle {
-    color: white;
-    font-size: 28px;
-    padding-bottom: 30px;
-}
-
-#featureCard {
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    border-left: 4px solid #6a11cb;
-}
-
-#featureTitle {
-    color: white;
-    font-size: 18px;
-    padding-bottom: 15px;
-}
-
-#featureDesc {
-    color: rgba(255, 255, 255, 0.7);
+    background: transparent;
+    border: none;
+    padding: 8px 16px;
     font-size: 14px;
 }
 
+QPushButton:hover {
+    color: #2a82da;
+    text-decoration: underline;
+}
+
+/* Hero Section */
+QLabel#heroTitle {
+    font-size: 36px;
+    font-weight: bold;
+    color: white;
+    padding-bottom: 15px;
+}
+
+QLabel#heroSubtitle {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Feature Cards */
+QFrame.feature-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    border-left: 5px solid;
+    min-width: 250px;
+    min-height: 200px;
+}
+
+QLabel.feature-icon {
+    font-size: 30px;
+    padding-bottom: 10px;
+}
+
+QLabel.feature-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    padding-bottom: 10px;
+}
+
+QLabel.feature-desc {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* CTA Section */
+QFrame#ctaSection {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+}
+
+QLabel#ctaTitle {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+QLabel#ctaText {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+QPushButton.primary-button {
+    background-color: #2a82da;
+    color: white;
+    padding: 12px 30px;
+    font-size: 16px;
+    border-radius: 25px;
+    min-width: 200px;
+    border: none;
+}
+
+QPushButton.primary-button:hover {
+    background-color: #1a6bb0;
+}
+
 /* Footer */
-#footer {
-    background-color: rgba(0, 0, 0, 0.3);
+QFrame#footer {
+    background-color: rgba(0, 0, 0, 0.2);
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-#copyright {
-    color: rgba(255, 255, 255, 0.6);
+QLabel#copyright {
     font-size: 12px;
+    color: rgba(255, 255, 255, 0.5);
 }
 
-/* Buttons */
-#logoutButton {
+QPushButton#logoutButton {
     background-color: rgba(255, 77, 77, 0.8);
     color: white;
     padding: 8px 20px;
@@ -80,6 +129,42 @@ QWidget {
     border: none;
 }
 
-#logoutButton:hover {
+QPushButton#logoutButton:hover {
     background-color: rgba(255, 77, 77, 1);
+}
+
+/* Section Titles */
+QLabel.section-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+    padding-bottom: 30px;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 800px) {
+    QLabel#heroTitle {
+        font-size: 28px;
+    }
+
+    QLabel#heroSubtitle {
+        font-size: 16px;
+    }
+
+    QFrame.feature-card {
+        min-width: 200px;
+        min-height: 180px;
+    }
+}
+
+/* Animation Effects */
+QPropertyAnimation {
+    duration: 500ms;
+    easing-curve: outBack;
+}
+
+/* Decorative Elements */
+QFrame.decorative-circle {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
 }

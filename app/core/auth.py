@@ -1,5 +1,6 @@
 from app.core.supabase_client import get_supabase
 
+#login- for existing users
 def login(email: str, password: str) -> bool:
     supabase = get_supabase()
     try:
@@ -9,6 +10,7 @@ def login(email: str, password: str) -> bool:
         print(f"Login error: {e}")
         return False
 
+#signup - for new users
 def signup(email: str, password: str) -> bool:
     supabase = get_supabase()
     try:
@@ -18,6 +20,7 @@ def signup(email: str, password: str) -> bool:
         print(f"Signup error: {e}")
         return False
 
+#forgot password
 def forgot_password(email: str) -> bool:
     supabase = get_supabase()
     try:

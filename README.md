@@ -36,7 +36,7 @@ The application includes the following features:
 
 ### 3.1 Prerequisites
 
-Before running the application, ensure you have the following installed:
+Before running the application, ensure that you have the following installed:
 
 * **Python:** (Specify version) Download from [python.org](https://www.python.org/)
 * **PyQt:** (Specify version) You can install it using pip:
